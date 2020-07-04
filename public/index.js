@@ -1,5 +1,8 @@
+import {saveRecord} from './db';
 let transactions = [];
 let myChart;
+
+navigator.serviceWorker.register('/service-worker.js');
 
 fetch("/api/transaction")
   .then(response => {
